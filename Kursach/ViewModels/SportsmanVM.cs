@@ -34,7 +34,18 @@ namespace Kursach.ViewModels
         public List<string> Sportscategorys { get; set; }
         public string SelectedSportscategory { get; set; }
 
-        public Sportsman EditSportsman { get; set; }
+        private Sportsman editSportsman;
+        public Sportsman EditSportsman
+        {
+            get => editSportsman;
+            set
+            {
+                editSportsman = value;
+                SportsmanCoach = editSportsman.Coach;
+                // или
+                //SportsmanCoach = Сoachs.FirstOrDefault(s => s.ID == editSportsman.IdCoach);
+            }
+        }
 
         private Sportsman selectedSportsman;
         public Sportsman SelectedSportsman
