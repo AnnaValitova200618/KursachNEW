@@ -1,0 +1,26 @@
+﻿<Page x:Class="Kursach.Pages.Test"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kursach.Pages"
+      mc:Ignorable="d" d:DesignWidth="1060"
+      Title="Test" Height="387">
+    <Border CornerRadius="70,70,70,70" Background="#FF3C7131" Grid.Column="1" BorderBrush="#FF062C07" BorderThickness="5,5,5,5" Margin="80,40,80,40
+            ">
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Сервер бд"  Width="650" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <TextBox Text="{Binding Server}" Width="650" FontSize="14"/>
+            <Label Content="Название бд"  Width="650" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <TextBox Text="{Binding DB}"  Width="650" FontSize="14"/>
+            <Label Content="Логин"  Width="650" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <TextBox Text="{Binding User}"  Width="650" FontSize="14"/>
+            <Label Content="Пароль"  Width="650" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <PasswordBox x:Name="passwordBox"  Width="650" FontSize="14"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Тест связи" Command="{Binding TestConnection}" Margin="10" FontSize="14"/>
+                <Button Content="Сохранить" Command="{Binding SaveSettings}"  Margin="10" FontSize="14"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Page>
